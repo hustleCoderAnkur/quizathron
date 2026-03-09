@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizathron</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <button class="back-btn">      
+        <img  src="https://img.icons8.com/ios-filled/50/FFFFFF/quiz.png" alt="quiz" />
+        </button>
+        <h1>Quizathron</h1>
+        <div class="header-spacer">
+            <h1>HustleCoderAnkur</h1>
+        </div>
+    </header>
+
+    <div class="layout">
+        <div class="quiz-main">
+            <div class="progress-section">
+                <div class="progress-meta">
+                    <span id="q-counter">Question 1 of 10</span>
+                    <span id="pct-label">10% Complete</span>
+                </div>
+                <div class="progress-bar-track">
+                    <div class="progress-bar-fill" id="progress-fill"></div>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-meta">
+                    <span class="points-badge" id="points-badge">0 points</span>
+                    <div class="timer">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <span id="timer-display">Timer</span>
+                    </div>
+                    <span class="difficulty-badge" id="difficulty-badge">difficulty</span>
+                </div>
+                <p class="question-text" id="question-text"></p>
+            </div>
+
+            <div class="options-grid" id="options-grid">
+                <button class="option" data-index="0">
+                    <span class="option-label">A</span>
+                    <span class="option-text"></span>
+                </button>
+                <button class="option" data-index="1">
+                    <span class="option-label">B</span>
+                    <span class="option-text"></span>
+                </button>
+                <button class="option" data-index="2">
+                    <span class="option-label">C</span>
+                    <span class="option-text"></span>
+                </button>
+                <button class="option" data-index="3">
+                    <span class="option-label">D</span>
+                    <span class="option-text"></span>
+                </button>
+            </div>
+
+            <div class="actions">
+                <button id="skip-btn" >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                        <line x1="4" y1="22" x2="4" y2="15" />
+                    </svg>
+                    Skip
+                </button>
+                <button  id="next-btn" >
+                    Next Question
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="stats-sidebar">
+            <div class="stats-card">
+                <div class="stats-title">Quiz Stats</div>
+                <div class="stat-item">
+                    <span class="stat-label">Score</span>
+                    <span class="stat-value" id="score-val"></span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Lives</span>
+                    <div class="hearts" id="hearts">
+                        <span class="heart">♥</span>
+                        <span class="heart">♥</span>
+                        <span class="heart">♥</span>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">Progress</span>
+                    <span class="stat-value white" id="progress-val"></span>
+                </div>
+                <!-- <div class="stat-item">
+                    <span class="stat-label">Position</span>
+                    <span class="stat-value" id="position-val">2nd</span>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
